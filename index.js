@@ -1,9 +1,12 @@
 const express = require('express');
+const cors = require("cors");
 const axios = require('axios');
 require('dotenv').config();  // To load environment variables
 
 const app = express();
 const PORT = process.env.PORT || 3000;
+
+app.use(cors());
 
 // Route to fetch Valorant stats
 app.get('/api/valorant/stats/:playerId', async (req, res) => {
