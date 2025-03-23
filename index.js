@@ -13,7 +13,7 @@ app.get('/api/valorant/stats/:playerId', async (req, res) => {
   const { playerId } = req.params;  // Player's Riot ID or Tracker.gg ID
   
   try {
-    const response = await axios.get(`https://api.tracker.gg/api/v2/valorant/standard/profile/riot/${playerId}`, {
+      const response = await axios.get(`https://api.tracker.gg/api/v2/valorant/standard/profile/riot/MEX%20Ikzy%23ONU`, {
       headers: {
         'TRN-Api-Key': process.env.TRACKER_API_KEY,  // API Key from .env
       },
